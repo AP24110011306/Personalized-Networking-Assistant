@@ -1,0 +1,18 @@
+from fastapi import APIRouter
+from conversation_generator import generate_conversation
+
+router = APIRouter()
+
+@router.get("/")
+def home():
+    return {"message": "Conversation Router"}
+
+@router.post("/generate")
+def generate(event: str, interests: str):
+    return {
+        "starters": generate_conversation(
+            event,
+            interests,
+            ["Networking"]
+        )
+    }
