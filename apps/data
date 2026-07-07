@@ -1,0 +1,10 @@
+sample_events = [
+    {
+        "event": "AI Summit",
+        "interests": "Machine Learning"
+    },
+    {
+        "event": "Healthcare Conference",
+        "interests": "Digital Health"
+    }
+]
