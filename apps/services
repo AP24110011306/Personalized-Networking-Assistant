@@ -1,8 +1,17 @@
 from conversation_generator import generate_conversation
+from theme_classifier import classify_theme
+from history_logger import save_history
 
 def generate_topics(event, interests, themes):
-    return generate_conversation(
+    return generate_conversation(event, interests, themes)
+
+def analyze_event(event):
+    return classify_theme(event)
+
+def log_feedback(event, feedback):
+    save_history(
         event,
-        interests,
-        themes
+        [],
+        [],
+        feedback
     )
