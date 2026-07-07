@@ -1,0 +1,10 @@
+from pydantic import BaseModel
+
+class UserRequest(BaseModel):
+    event: str
+    interests: str
+
+class UserResponse(BaseModel):
+    themes: list
+    starters: list
+    fact_check: dict
