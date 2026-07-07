@@ -1,0 +1,8 @@
+from conversation_generator import generate_conversation
+
+def generate_topics(event, interests, themes):
+    return generate_conversation(
+        event,
+        interests,
+        themes
+    )
