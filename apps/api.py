@@ -19,7 +19,7 @@ def home():
     return {"message": "Personalized Networking Assistant API is running"}
 
 
-@app.post("/generate")
+@app.post("/generate-conversation")
 def generate(request: UserRequest):
     themes = classify_theme(request.event)
 
